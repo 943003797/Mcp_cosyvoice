@@ -20,8 +20,8 @@ def create_text_to_audio(text: str,file_neme: str, file_path: str) -> str:
     """
 
     dashscope.api_key = os.getenv("DASHSCOPE_API_KEY")
-    url = "https://api.hostize.com/files/d7B0_pGfZZ/download/file.wav"
-    prefix = 'prefix'
+    # url = "https://api.hostize.com/files/d7B0_pGfZZ/download/file.wav"
+    # prefix = 'prefix'
     target_model = "cosyvoice-v1"
 
     service = VoiceEnrollmentService()
