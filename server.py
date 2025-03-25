@@ -19,7 +19,7 @@ def create_text_to_audio(text: str,file_neme: str, file_path: str) -> str:
         Failed: Operation failed
     """
 
-    dashscope.api_key = 'sk-30d9c41320b94ca09f1eb917261ed379'
+    dashscope.api_key = os.getenv("DASHSCOPE_API_KEY")
     url = "https://api.hostize.com/files/d7B0_pGfZZ/download/file.wav"
     prefix = 'prefix'
     target_model = "cosyvoice-v1"
