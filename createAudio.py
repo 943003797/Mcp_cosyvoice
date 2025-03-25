@@ -7,12 +7,13 @@ import time
 mcp = FastMCP("GetAudio")
 
 @mcp.tool()
-def say_hello(text: str, file_path: str) -> str:
+def say_hello(text: str,file_neme: str, file_path: str) -> str:
     """
     使用这个工具可以获取配音, 输入文本和目录即可生成配音并保存到指定目录
     参数:
         text: 要生成配音的文本
-        file_path: 保存配音的目录
+        file_neme: 文件名
+        file_path: 保存目录
     返回:
         Success: 成功
         Failed: 失败
@@ -42,8 +43,7 @@ def say_hello(text: str, file_path: str) -> str:
     # 确保保存目录存在
     os.makedirs(save_directory, exist_ok=True)
     # 拼接完整的文件路径
-    timestamp = str(int(time.time()))
-    file_path = os.path.join(save_directory, f"{timestamp}.mp3")
+    file_path = os.path.join(save_directory, f"{file_neme}.mp3")
     try:
         with open(file_path, "wb") as f:
             f.write(audio_result)
