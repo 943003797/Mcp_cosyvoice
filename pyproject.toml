@@ -8,4 +8,5 @@ dependencies = [
     "dashscope>=1.22.2",
     "gradio-client>=1.8.0",
     "mcp[cli]>=1.5.0",
+    "python-magic-bin>=0.4.14",
 ]

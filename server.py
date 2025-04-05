@@ -4,6 +4,7 @@ import dashscope
 from dashscope.audio.tts_v2 import VoiceEnrollmentService, SpeechSynthesizer
 from mcp.server.fastmcp import FastMCP
 import time
+import magic
 
 mcp = FastMCP("GetAudio")
 
@@ -29,7 +30,7 @@ class Cosyvoice:
     def __init__(self):
         pass
     def create_text_to_audio(self, text: str, file_neme: str, file_path: str) -> str:
-        if self.sleepTime >= 3:
+        if self.sleepTime >= 2:
             time.sleep(1)
             self.create_text_to_audio(text, file_neme, file_path)
         self.sleepTime += 1
@@ -59,9 +60,12 @@ class Cosyvoice:
             # txt_file_path = os.path.join(save_directory, f"{file_neme}.txt")
             # with open(txt_file_path, "w", encoding="utf-8") as txt_file:
             #     txt_file.write(text)
+            # 检查文件是否为有效的 MP3 文件
+            file_mime = magic.from_file(file_path, mime=True)
+            if file_mime != 'audio/mpeg':
+                return "Failed"
             return "Success"
         except Exception as e:
-            print(f"Error: {e}")
             return "Failed"
 if __name__ == "__main__":
     mcp.run(transport='stdio')
