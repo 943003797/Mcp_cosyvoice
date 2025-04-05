@@ -42,7 +42,7 @@ class Cosyvoice:
 
         # service = VoiceEnrollmentService()
 
-        voice_id = "cosyvoice-prefix-4eec46a3b5d8499a8c29c46766452a63"
+        voice_id = "cosyvoice-prefix-84fa79f3ce034aea89727a81bb7222f9"
         synthesizer = SpeechSynthesizer(model=target_model, voice=voice_id)
         audio_result = synthesizer.call(text)
         self.sleepTime -= 1
