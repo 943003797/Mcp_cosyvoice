@@ -73,6 +73,4 @@ class Cosyvoice:
         except Exception as e:
             return "Failed"
 if __name__ == "__main__":
-    # cv = Cosyvoice()
-    # cv.create_json_to_audio("S:/AI/AutoGenTest/output/item.json", "S:/AI/AutoGenTest/output")
     mcp.run(transport='stdio')

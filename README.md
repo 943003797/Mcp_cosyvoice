@@ -16,3 +16,20 @@ uv venv .venv -p 3.12
 
 # 安装项目依赖
 uv sync
+
+Autogen中调用
+
+shiciToAudio = await mcp_server_tools(
+        StdioServerParams(
+            command="uv",
+            args=[
+                "--directory",
+                "../../Mcp/Mcp_cosyvoice",
+                "run",
+                "server_json.py"
+            ],
+            env={
+                "DASHSCOPE_API_KEY": "sk-30d9c41320b94ca09f1eb917261ed379",
+            }
+        )
+    )
