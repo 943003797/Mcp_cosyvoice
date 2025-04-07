@@ -6,19 +6,17 @@
 
 ## 🚀 使用步骤
 
-### 环境配置
-```bash
-# 创建Python 3.12虚拟环境
+### 创建Python 3.12虚拟环境
 uv venv .venv -p 3.12
 
-# 激活虚拟环境（Windows）
+### 激活虚拟环境（Windows）
 .venv\Scripts\activate
 
-# 安装项目依赖
+### 安装项目依赖
 uv sync
 
-Autogen中调用
-
+### Autogen中调用
+```bash
 shiciToAudio = await mcp_server_tools(
         StdioServerParams(
             command="uv",
