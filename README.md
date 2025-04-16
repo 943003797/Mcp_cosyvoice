@@ -25,7 +25,7 @@ shiciToAudio = await mcp_server_tools(
                 "server_json.py"
             ],
             env={
-                "DASHSCOPE_API_KEY": "sk-30d9c41320b94ca09f1eb917261ed379",
+                "DASHSCOPE_API_KEY": "API_KEY",
             }
         )
     )
