@@ -2,7 +2,7 @@ import os
 import dashscope
 from dashscope.audio.tts_v2 import VoiceEnrollmentService, SpeechSynthesizer
 
-dashscope.api_key = 'sk-bdd56855586b4d82ab13ee4afee4dd31'
+dashscope.api_key = os.getenv("ALI_KEY")
 # url = "https://api.hostize.com/files/B8dLShNAE5/download/file.wav"
 url = "https://api.hostize.com/files/adsTkQnQCK/download/file.wav"
 prefix = 'prefix'

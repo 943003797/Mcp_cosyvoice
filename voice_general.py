@@ -4,9 +4,11 @@ from dashscope.audio.tts_v2 import VoiceEnrollmentService, SpeechSynthesizer
 from dashscope.audio.tts_v2.speech_synthesizer import json
 from mcp.server.fastmcp import FastMCP
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
 def get_audio(text: str, out_path: str) -> str:
-        dashscope.api_key = 'sk-bdd56855586b4d82ab13ee4afee4dd31'
+        dashscope.api_key = os.getenv("ALI_KEY")
         target_model = "cosyvoice-v2"
         voice_id = "cosyvoice-v2-prefix-2b8af8aa641345bbb715e58f0079c2a1"
         synthesizer = SpeechSynthesizer(model=target_model, voice=voice_id)
