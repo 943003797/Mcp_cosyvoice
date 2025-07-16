@@ -38,11 +38,12 @@ class Cosyvoice:
         dashscope.api_key = os.getenv("DASHSCOPE_API_KEY")
         # url = "https://api.hostize.com/files/d7B0_pGfZZ/download/file.wav"
         # prefix = 'prefix'
-        target_model = "cosyvoice-v1"
+        target_model = "cosyvoice-v2"
 
         # service = VoiceEnrollmentService()
 
-        voice_id = "cosyvoice-prefix-84fa79f3ce034aea89727a81bb7222f9"
+        # voice_id = "cosyvoice-prefix-84fa79f3ce034aea89727a81bb7222f9"
+        voice_id = "cosyvoice-v2-prefix-2b8af8aa641345bbb715e58f0079c2a1"
         synthesizer = SpeechSynthesizer(model=target_model, voice=voice_id)
         audio_result = synthesizer.call(text)
         self.sleepTime -= 1

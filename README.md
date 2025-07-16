@@ -4,8 +4,8 @@
 
 ## 🚀 使用步骤
 
-### 创建Python 3.12虚拟环境
-uv venv .venv -p 3.12
+### 创建Python 虚拟环境
+uv venv .venv
 
 ### 激活虚拟环境（Windows）
 .venv\Scripts\activate
@@ -22,10 +22,10 @@ shiciToAudio = await mcp_server_tools(
                 "--directory",
                 "../../Mcp/Mcp_cosyvoice",
                 "run",
-                "server_json.py"
+                "main.py"
             ],
             env={
-                "DASHSCOPE_API_KEY": "API_KEY",
+                "ALI_KEY": "API_KEY",
             }
         )
     )

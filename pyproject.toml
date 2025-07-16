@@ -1,12 +1,10 @@
 [project]
-name = "mcp_cosyvoice"
+name = "cosyvoice-mcp"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "dashscope>=1.22.2",
-    "gradio-client>=1.8.0",
-    "mcp[cli]>=1.5.0",
-    "python-magic-bin>=0.4.14",
+    "dashscope>=1.23.8",
+    "mcp>=1.11.0",
 ]
